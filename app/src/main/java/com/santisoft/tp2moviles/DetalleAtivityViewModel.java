@@ -28,7 +28,7 @@ public class DetalleAtivityViewModel extends AndroidViewModel {
     }
 
     public void cargarLibro(Intent intent) {
-        String libro = intent.getStringExtra("Libro");
+        String libro = intent.getStringExtra("libro");
         if(libro!=null){
             for (Libro li : listaLibros) {
                 if (li.getTitulo().equalsIgnoreCase(libro)){
