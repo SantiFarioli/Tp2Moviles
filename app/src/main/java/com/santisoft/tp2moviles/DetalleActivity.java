@@ -1,5 +1,6 @@
 package com.santisoft.tp2moviles;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -23,9 +24,11 @@ private DetalleAtivityViewModel vm;
         setContentView(binding.getRoot());
         vm = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(DetalleAtivityViewModel.class);
 
+
         vm.getLibroLiveData().observe(this, new Observer<Libro>() {
             @Override
             public void onChanged(Libro libro) {
+
                 binding.tvTitulo.setText(libro.getTitulo());
                 binding.tvAnio.setText(libro.getAnio() + "");
                 binding.tvAutor.setText(libro.getAutor());
@@ -33,7 +36,10 @@ private DetalleAtivityViewModel vm;
                 binding.tvPrologo.setText(libro.getPrologo());
                 binding.ivFoto.setImageResource(libro.getFoto());
 
+
             }
         });
+        Intent intent = getIntent();
+        vm.cargarLibro(intent);
     }
 }
