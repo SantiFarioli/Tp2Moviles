@@ -11,12 +11,14 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
-        android:layout_height="52dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="256dp"
-        android:background="@drawable/bg_title"
+        android:background="@color/white"
+        android:gravity="center"
         android:text="Busacar Libro"
-
-        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:padding="8dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,21 +29,33 @@
         android:layout_width="wrap_content"
         android:layout_height="52dp"
         android:layout_marginTop="68dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/bg_title"
         android:ems="10"
         android:hint="Search Boock..."
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
+        android:padding="8dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/buttonSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/editTextSearch"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/editTextSearch"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSearch" />
+        android:layout_marginTop="208dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextSearch"
+        app:layout_constraintEnd_toStartOf="@+id/editTextSearch"
+        app:layout_constraintTop_toTopOf="@+id/editTextSearch"
+        app:srcCompat="@drawable/icon_search" />
 </androidx.constraintlayout.widget.ConstraintLayout>
