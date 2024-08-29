@@ -28,6 +28,10 @@ private DetalleAtivityViewModel vm;
             public void onChanged(Libro libro) {
                 binding.tvTitulo.setText(libro.getTitulo());
                 binding.tvAnio.setText(libro.getAnio() + "");
+                binding.tvAutor.setText(libro.getAutor());
+                binding.tvGenero.setText(libro.getGenero());
+                binding.tvPrologo.setText(libro.getPrologo());
+                binding.ivFoto.setImageResource(libro.getFoto());
 
             }
         });
