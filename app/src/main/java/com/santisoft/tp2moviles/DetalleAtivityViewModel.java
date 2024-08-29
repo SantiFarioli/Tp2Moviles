@@ -37,6 +37,7 @@ public class DetalleAtivityViewModel extends AndroidViewModel {
                 }
             }
             mLibro.setValue(new Libro("No encontrado", "No encontrado", 0,"No encontrado","No encontrado", R.drawable.error));
+            mLibro.setValue(new Libro("Martin Fierro","José Hernández",1872,"Poesia","El libro “El Gaucho Martín Fierro” es un poema narrativo escrito en verso por José Hernández en 1872. Se considera una obra literaria ejemplar del género gauchesco y tiene 2316 versos distribuidos en 13 cantos.", R.drawable.martin_fierro_1894));
         }
     }
 
