@@ -15,7 +15,7 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     public void buscarLibro(String libro) {
         if (libro.isEmpty()) {
-            Toast.makeText(getApplication(), "Por Favor Ingrese un Libro", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplication(), "Por Favor Ingrese Un Libro", Toast.LENGTH_SHORT).show();
         } else {
             Intent intent = new Intent(getApplication(),DetalleActivity.class);
             intent.putExtra("libro",libro);
