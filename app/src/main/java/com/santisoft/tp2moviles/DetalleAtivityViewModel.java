@@ -21,6 +21,8 @@ public class DetalleAtivityViewModel extends AndroidViewModel {
     public DetalleAtivityViewModel(@NonNull Application application) {
         super(application);
         listaLibros.add(new Libro("Martin Fierro","José Hernández",1872,"Poesia","El libro “El Gaucho Martín Fierro” es un poema narrativo escrito en verso por José Hernández en 1872. Se considera una obra literaria ejemplar del género gauchesco y tiene 2316 versos distribuidos en 13 cantos.", R.drawable.martin_fierro_1894));
+        listaLibros.add(new Libro("Ficciones", "Jorge Luis Borges",1944,"ficción literaria","El libro se divide en dos secciones llamadas El jardín de senderos que se bifurcan y Artificios. La división del libro en dos se debe a que la primera parte había sido publicada originalmente tres años antes, en 1941, como un libro individual.", R.drawable.ficciones));
+
     }
 
     public LiveData<Libro> getLibroLiveData() {
@@ -28,7 +30,7 @@ public class DetalleAtivityViewModel extends AndroidViewModel {
     }
 
     public void cargarLibro(Intent intent) {
-        String libro = intent.getStringExtra("Libro");
+        String libro = intent.getStringExtra("libro");
         if(libro!=null){
             for (Libro li : listaLibros) {
                 if (li.getTitulo().equalsIgnoreCase(libro)){
