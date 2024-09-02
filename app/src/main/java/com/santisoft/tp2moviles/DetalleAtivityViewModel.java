@@ -40,7 +40,6 @@ public class DetalleAtivityViewModel extends AndroidViewModel {
                 }
             }
             mLibro.setValue(new Libro("No encontrado", "No encontrado", 0,"No encontrado","No encontrado", R.drawable.error));
-           // mLibro.setValue
         }
     }
 

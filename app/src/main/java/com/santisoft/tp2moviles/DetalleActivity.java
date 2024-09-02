@@ -39,7 +39,6 @@ private DetalleAtivityViewModel vm;
 
             }
         });
-        Intent intent = getIntent();
-        vm.cargarLibro(intent);
+        vm.cargarLibro(getIntent());
     }
 }
